@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>练习</title>
+<style>
+</style>
+
+<script>
+window.onload=function(){
+	var oBtn=document.querySelector('input');
+	oBtn.onclick=function(){
+		//alert(oBtn['data-index']);
+		//alert(oBtn.getAttribute('data-index'));
+		alert(oBtn.dataset.index)
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="按钮" data-index="1"/>
+</body>
+</html>

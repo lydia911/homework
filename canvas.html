@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>练习</title>
+<style>
+*{margin:0;padding:0;}
+body{background:#000;}
+#c1{background:#fff;margin:10px auto;display:block;}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oC=document.getElementById('c1');
+	var gd=oC.getContext('2d');//图形上下文
+	gd.moveTo(380,56);
+	gd.lineTo(598,180);
+	gd.lineTo(382,282);
+	gd.lineTo(192,166);
+	gd.lineTo(380,56);
+	gd.stroke();
+},false)
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="800" height="600" ></canvas>
+</body>
+</html>

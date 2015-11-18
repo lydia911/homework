@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>练习</title>
+<style>
+*{margin:0;padding:0;}
+body{background:#000;}
+span{width:200px;height:200px;background:#FF3;border-radius:50%;position:absolute;top:50%;left:50%;margin-left:-100px;margin-top:-100px;}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oS=document.getElementById('s1');
+	document.onmousemove=function(ev){
+		var x1=ev.pageX;
+		var y1=ev.pageY;
+		var x2=oS.offsetLeft+oS.offsetWidth/2;
+		var y2=oS.offsetTop+oS.offsetHeight/2;
+		var disX=(x2-x1)/3;
+		var disY=(y2-y1)/3;
+		var dis=Math.sqrt(Math.abs(disX,2)+Math.abs(disY,2))
+		oS.style.boxShadow=disX+'px '+disY+'px '+dis+'px #FF9';
+	};
+},false)
+</script>
+</head>
+
+<body>
+<span id="s1"></span>
+</body>
+</html>
